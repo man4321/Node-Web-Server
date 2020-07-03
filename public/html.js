@@ -16,7 +16,7 @@ form.addEventListener('submit',(e)=>{
     message1.textContent='Loading...';
     message2.textContent="";
     search.value="";
-    fetch('http://localhost:3001/weather?address='+location).then((response)=>{
+    fetch('/weather?address='+location).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 message1.innerText=data.error;

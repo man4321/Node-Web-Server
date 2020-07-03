@@ -11,7 +11,7 @@ const partialsDir = path.join(__dirname,'/templets/partials')
 
 const app = express();
 
-
+const port = process.env.PORT ||3000
 
 app.set('view engine','hbs');
 app.set('views',viewDir);
@@ -83,6 +83,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3001,()=>{
-    console.log('server 3001 is runing...')
+app.listen(port,()=>{
+    console.log('server '+port+' is runing...')
 });
